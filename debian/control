@@ -1,0 +1,57 @@
+Source: pkcs11-helper
+Section: libs
+Priority: optional
+Maintainer: Debian OpenSC Maintainers <pkg-opensc-maint@lists.alioth.debian.org>
+Uploaders: Eric Dorland <eric@debian.org>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               doxygen,
+               libssl-dev,
+               pkg-config
+Standards-Version: 4.6.0.2
+Homepage: https://github.com/OpenSC/pkcs11-helper
+Vcs-Git: https://salsa.debian.org/opensc-team/pkcs11-helper.git
+Vcs-Browser: https://salsa.debian.org/opensc-team/pkcs11-helper
+
+Package: libpkcs11-helper1-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Provides: libpkcs11-helper-dev
+Conflicts: libpkcs11-helper-dev
+Depends: libjs-jquery,
+         libpkcs11-helper1 (= ${binary:Version}),
+         libssl-dev,
+         ${misc:Depends}
+Description: library that simplifies the interaction with PKCS#11
+ libpkcs11-helper is a library that simplifies the interaction with PKCS#11
+ providers for end-user applications.
+ .
+ libpkcs11-helper allows using multiple PKCS#11 providers at the same time,
+ enumerating available token certificates, or selecting a certificate
+ directly by serialized id, handling card removal and card insert
+ events, handling card re-insert to a different slot, supporting session
+ expiration and much more all using a simple API.
+ .
+ libpkcs11-helper is not designed to manage card content, since object
+ attributes are usually vendor specific, and 99% of application need to
+ access existing objects in order to perform signature and decryption.
+
+Package: libpkcs11-helper1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library that simplifies the interaction with PKCS#11
+ libpkcs11-helper is a library that simplifies the interaction with PKCS#11
+ providers for end-user applications.
+ .
+ libpkcs11-helper allows using multiple PKCS#11 providers at the same time,
+ enumerating available token certificates, or selecting a certificate
+ directly by serialized id, handling card removal and card insert
+ events, handling card re-insert to a different slot, supporting session
+ expiration and much more all using a simple API.
+ .
+ libpkcs11-helper is not designed to manage card content, since object
+ attributes are usually vendor specific, and 99% of application need to
+ access existing objects in order to perform signature and decryption.

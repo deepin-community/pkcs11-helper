@@ -1,0 +1,3 @@
+version=4
+
+https://github.com/OpenSC/pkcs11-helper/releases/latest (?:.*/)?pkcs11-helper-(\d[\d\.]*)\.tar\.bz2
