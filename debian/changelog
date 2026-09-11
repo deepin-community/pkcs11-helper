@@ -1,8 +1,12 @@
-pkcs11-helper (1.28-1) UNRELEASED; urgency=medium
+pkcs11-helper (1.28-2) unstable; urgency=medium
 
+  [ Debian OpenSC Maintainers ]
   * update
 
- -- Debian OpenSC Maintainers <pkg-opensc-maint@lists.alioth.debian.org>  Thu, 16 Jun 2022 13:59:45 +0800
+  [ tunaichao ]
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Fri, 11 Sep 2026 17:34:34 +0800
 
 pkcs11-helper (1.28-1) unstable; urgency=medium
 
